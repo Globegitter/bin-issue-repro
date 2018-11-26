@@ -1,0 +1,10 @@
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
+
+nodejs_binary(
+    name = "index",
+    data = [
+        "index.js",
+        "@myyarn//webpack",
+    ],
+    entry_point = "__main__/index.js",
+)
